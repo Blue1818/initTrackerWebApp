@@ -1,0 +1,32 @@
+Cent Table:
+centId(primary)
+entName
+Ability scores x6
+modded saving throws x6
+Modded skill throws x18
+damgCondCode x(number of damage types)
+
+table creation statement:
+
+
+table insert statment:
+
+
+
+encounter Table:
+encId(primary)
+encName
+desc
+
+table creation statement:
+
+
+table insert statment:
+
+
+
+
+encounterOrder Table:
+centId*(primary)(forign:Cent)
+encId*(primary)(forign:encounter)
+quantity
