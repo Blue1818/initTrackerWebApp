@@ -50,6 +50,7 @@ string sqlScript
 string midPart
 string scriptArguments
 string scriptEndCap
+bitArray
 
 
 start:
@@ -58,7 +59,7 @@ start:
   //don't forget to add a , before each name and each argument
   midPart = ", damageCode ) VALUES ( "
 
-  scriptEndCap = ");"
+  scriptEndCap = " );"
 
 
 
@@ -71,17 +72,25 @@ start:
 
 
 
-  for (each sav and skill check textbox that is filled in)
-    sqlScript = sqlScript.", ".nameOfStat
-    scriptArguments = scriptArguments.", ".$_POST['nameOfStat']
+  for (each sav and skill check textbox that is filled in) loop
+    if ($_POST['nameOfStat'] != NULL)  // if not equal to NULL aka not blank
+      sqlScript = sqlScript.", ".nameOfStat
+      scriptArguments = scriptArguments.", ".$_POST['nameOfStat']
+    end if
+  end for loop
 
 
+  //then do damageCode argument (to cap everything off eh?)
+  //so first we are going make a bitArray
+  for (each of the damage types) loop //x13 damage types
+    translate val to 2-bit and ammend bitArray.
+  end for loop
 
-  //for damageCode argument (to cap everything off eh?)
+  scriptArguments = scriptArguments.", ".bitArray
 
 
-
-
+  sqlScript = sqlScript.midPart.scriptArguments.scriptEndCap
+  return sqlScript
 
 stop;
 
