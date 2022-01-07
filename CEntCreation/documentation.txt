@@ -1,0 +1,9 @@
+CEntCreation interface:
+by Dale Westberg (Bleu)
+
+
+description: The user will be able to input their character Sheet values into the interface
+and submit them to be added to the local database in the Cent Table.
+See sqlTables.txt for database structure.
+Then the interface returns the centId of the newly formed Cent.
+

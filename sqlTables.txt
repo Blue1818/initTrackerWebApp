@@ -1,0 +1,105 @@
+Database Documentation
+by Dale Westberg (Bleu)
+
+->user Table:
+userID
+username
+password
+
+table creation statement:
+CREATE TABLE `inittrackerdb`.`user` (
+  `userID` INT(11) NOT NULL AUTO_INCREMENT ,
+  `username` VARCHAR(50) NOT NULL ,
+  `password` VARCHAR(50) NOT NULL ,
+  PRIMARY KEY (`userID`)
+) ENGINE = InnoDB;
+
+table insert statment:
+INSERT INTO user (username, password)
+VALUES ('testName', 'testPass');
+
+
+
+->Cent Table:
+CentID(primary)
+userID* NULL (userID of creator)
+centName NOT NULL
+raceClass NOT NULL
+cr NOT NULL
+Ability scores x6 NOT NULL
+modded saving throws x6 NULL
+Modded skill throws x18 NULL
+damgCondCode x13 NOT NULL
+(
+  0 = immunity
+  1 = resistance
+  2 = normal
+  3 = Immunity
+)
+2 bits each
+26 bits (4 character unit
+
+table creation statement:
+CREATE TABLE `inittrackerdb`.`Cent` ( `CentID` INT(11) NOT NULL AUTO_INCREMENT , `userID` INT(11) NULL , `centName` VARCHAR(50) NOT NULL , `raceClass` VARCHAR(50) NOT NULL , `cr` INT(11) NOT NULL , `strength` INT(11) NOT NULL , `dexterity` INT(11) NOT NULL , `constitution` INT(11) NOT NULL , `intelligence` INT(11) NOT NULL , `wisdom` INT(11) NOT NULL , `charisma` INT(11) NOT NULL , `strSav` INT(11) NULL , `dexSav` INT(11) NULL , `conSav` INT(11) NULL , `intSav` INT(11) NULL , `wisSav` INT(11) NULL , `chaSav` INT(11) NULL , `acrobatics` INT(11) NULL , `animalHandling` INT(11) NULL , `arcana` INT(11) NULL , `athletics` INT(11) NULL , `deception` INT(11) NULL , `history` INT(11) NULL , `insight` INT(11) NULL , `intimidation` INT(11) NULL , `investigation` INT(11) NULL , `medicine` INT(11) NULL , `nature` INT(11) NULL , `perception` INT(11) NULL , `performance` INT(11) NULL , `persuasion` INT(11) NULL , `religion` INT(11) NULL , `SoH` INT(11) NULL , `stealth` INT(11) NULL , `survival` INT(11) NULL , `damageCode` BIT(26) NOT NULL , PRIMARY KEY (`centID`)) ENGINE = InnoDB;
+
+table insert statment:
+Ok so best way to go about this, I feel is to construct a string using if statements for the saves and skill checks if they are filled in.
+so let's lay out the puto code for this:
+var:
+string sqlScript
+string midPart
+string scriptArguments
+string scriptEndCap
+
+
+start:
+  sqlScript = "INSERT INTO Cent ( centName, raceClass, cr, strength, dexterity, constitution, intelligence, wisdom, charisma"
+
+  //don't forget to add a , before each name and each argument
+  midPart = ", damageCode ) VALUES ( "
+
+  scriptEndCap = ");"
+
+
+
+  //for centName to charisma get the arguments from POST.
+  //ex. for centName
+  scriptArguments = $_POST['centName']
+
+  //ex. for raceClass
+  scriptArguments = ", ".scriptArguments.$_POST['raceClass']
+
+
+
+  for (each sav and skill check textbox that is filled in)
+    sqlScript = sqlScript.", ".nameOfStat
+    scriptArguments = scriptArguments.", ".$_POST['nameOfStat']
+
+
+
+  //for damageCode argument (to cap everything off eh?)
+
+
+
+
+
+stop;
+
+
+encounter Table:
+encID(primary)
+encName
+desc
+
+table creation statement:
+
+
+table insert statment:
+
+
+
+
+encounterOrder Table:
+centID*(primary)(forign:Cent)
+encId*(primary)(forign:encounter)
+quantity
