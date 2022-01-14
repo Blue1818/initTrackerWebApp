@@ -1,8 +1,13 @@
 .grid-container {
     display:inline-grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+}
+
+h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-size:20px;
 }
 
 label {
@@ -17,12 +22,11 @@ div {
     padding:0px;
 }
 
-.firstBlock {
-    width:290px;
-    height:100px;
 
-    color:rgb(119, 93, 93);
-    border:10px solid #cccccc;
+.firstBlock {
+    width:340px;
+    height:150px;
+
     /* border-top:10px solid #cccccc; */
     margin:0px;
     /* margin-right:900px; */
@@ -30,22 +34,26 @@ div {
 }
 
 .abilScores {
-    width:290px;
+    width:340px;
     height:200px;
 
+    grid-column: 1;
+    grid-row: 2;
     
     margin:0px;
     padding:0px;
 }
 
 .abilSaves {
-    width:290px;
+    width:340px;
     height:200px;
 
     /* border:0px; */
     margin:0px;
     padding:0px;
+    padding-bottom:50px;
 }
+
 
 .skillChecks {
     
@@ -53,5 +61,13 @@ div {
     
 
     grid-column: 2;
+    grid-row: 1 / span 3;
+}
+
+.nav-bar {
+
+
+
+    grid-column: 3;
     grid-row: 1 / span 3;
 }
