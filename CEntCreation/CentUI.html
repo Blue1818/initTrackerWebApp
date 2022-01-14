@@ -1,131 +1,135 @@
-
+<!DOCTYPE html>
 <html>
 <head>
 <title>Cent UI</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
-
+<link rel="stylesheet" href="CentUI.css">
 
 </head>
 <body>
 
 
 <form action='createCent.php' method='post'>
-	<div>
-		<label for='centName'>Character Name: </label>
-		<input type='text' id='centName' name='centName'><br>
+	<div class="grid-container">
 
-		<label for='rc'>Race/Class: </label>
-		<input type='text' id='rc' name='rc'><br>
+			<div class="firstBlock">
+				<h1>Character Info:</h1>
+				<label for='centName'>Character Name: </label>
+				<input type='text' id='centName' name='centName'><br>
 
-		<label for='cr'>Level: </label>
-		<input type='text' id='cr' name='cr'><br>
+				<label for='rc'>Race/Class: </label>
+				<input type='text' id='rc' name='rc'><br>
+
+				<label for='cr'>Level: </label>
+				<input type='number' id='cr' name='cr'><br>
+			</div>
+		
+
+		
+			<div class="abilScores">
+				<h1>Ability Scores:</h1>
+				<label for='strength'>Strength: </label>
+				<input type='number' id='strength' name='strength'><br>
+
+				<label for='dexterity'>Dexterity: </label>
+				<input type='number' id='dexterity' name='dexterity'><br>
+
+				<label for='constitution'>Constitution: </label>
+				<input type='number' id='constitution' name='constitution'><br>
+
+				<label for='intelligence'>Intelligence: </label>
+				<input type='number' id='intelligence' name='intelligence'><br>
+
+				<label for='wisdom'>Wisdom: </label>
+				<input type='number' id='wisdom' name='wisdom'><br>
+
+				<label for='charisma'>Charisma: </label>
+				<input type='number' id='charisma' name='charisma'><br>
+			</div>
+		
+
+
+		
+			<div class="abilSaves">
+				<h1>Moded Ability Saves (only fill modified Ability Saves):</h1>
+				<label for='strSav'>Strength Save: </label>
+				<input type='number' id='strSav' name='strSav'><br>
+
+				<label for='dexSav'>Dexterity Save: </label>
+				<input type='number' id='dexSav' name='dexSav'><br>
+
+				<label for='conSav'>Constitution Save: </label>
+				<input type='number' id='conSav' name='conSav'><br>
+
+				<label for='intSav'>Intelligence Save: </label>
+				<input type='number' id='intSav' name='intSav'><br>
+
+				<label for='wisSav'>Wisdom Save: </label>
+				<input type='number' id='wisSav' name='wisSav'><br>
+
+				<label for='chaSav'>Charisma Save: </label>
+				<input type='number' id='chaSav' name='chaSav'><br>
+			</div>
+		
+
+
+		<div class="skillChecks">
+			<h1>Moded Skill Checks (only fill modified Skill Checks):</h1>
+			<label for='acrobatics'>Acrobatics: </label>
+			<input type='number' id='acrobatics' name='acrobatics'><br>
+
+			<label for='animalHandling'>Animal  Handling: </label>
+			<input type='number' id='animalHandling' name='animalHandling'><br>
+
+			<label for='arcana'>Arcana: </label>
+			<input type='number' id='arcana' name='arcana'><br>
+
+			<label for='athletics'>Athletics: </label>
+			<input type='number' id='athletics' name='athletics'><br>
+
+			<label for='deception'>Deception: </label>
+			<input type='number' id='deception' name='deception'><br>
+
+			<label for='history'>History: </label>
+			<input type='number' id='history' name='history'><br>
+
+			<label for='insight'>Insight: </label>
+			<input type='number' id='insight' name='insight'><br>
+
+			<label for='intimidation'>Intimidation: </label>
+			<input type='number' id='intimidation' name='intimidation'><br>
+
+			<label for='investigation'>Investigation: </label>
+			<input type='number' id='investigation' name='investigation'><br>
+
+			<label for='medicine'>Medicine: </label>
+			<input type='number' id='medicine' name='medicine'><br>
+
+			<label for='nature'>Nature: </label>
+			<input type='number' id='nature' name='nature'><br>
+
+			<label for='perception'>Perception: </label>
+			<input type='number' id='perception' name='perception'><br>
+
+			<label for='performance'>Performance: </label>
+			<input type='number' id='performance' name='performance'><br>
+
+			<label for='persuasion'>Persuasion: </label>
+			<input type='number' id='persuasion' name='persuasion'><br>
+
+			<label for='religion'>Religion: </label>
+			<input type='number' id='religion' name='religion'><br>
+
+			<label for='SoH'>Sleight of Hand: </label>
+			<input type='number' id='SoH' name='SoH'><br>
+
+			<label for='stealth'>Stealth: </label>
+			<input type='number' id='stealth' name='stealth'><br>
+
+			<label for='survival'>Survival: </label>
+			<input type='number' id='survival' name='survival'><br>
+		</div>
 	</div>
-
-	<br>
-	<div>
-		Ability Scores:<br>
-		<label for='strength'>Strength: </label>
-		<input type='text' id='strength' name='strength'><br>
-
-		<label for='dexterity'>Dexterity: </label>
-		<input type='text' id='dexterity' name='dexterity'><br>
-
-		<label for='constitution'>Constitution: </label>
-		<input type='text' id='constitution' name='constitution'><br>
-
-		<label for='intelligence'>Intelligence: </label>
-		<input type='text' id='intelligence' name='intelligence'><br>
-
-		<label for='wisdom'>Wisdom: </label>
-		<input type='text' id='wisdom' name='wisdom'><br>
-
-		<label for='charisma'>Charisma: </label>
-		<input type='text' id='charisma' name='charisma'><br>
-	</div>
-
-
-	<br>
-	<div>
-		Moded Ability Saves (only fill text boxes for modified Ability Saves):<br>
-		<label for='strSav'>Strength Save: </label>
-		<input type='text' id='strSav' name='strSav'><br>
-
-		<label for='dexSav'>Dexterity Save: </label>
-		<input type='text' id='dexSav' name='dexSav'><br>
-
-		<label for='conSav'>Constitution Save: </label>
-		<input type='text' id='conSav' name='conSav'><br>
-
-		<label for='intSav'>Intelligence Save: </label>
-		<input type='text' id='intSav' name='intSav'><br>
-
-		<label for='wisSav'>Wisdom Save: </label>
-		<input type='text' id='wisSav' name='wisSav'><br>
-
-		<label for='chaSav'>Charisma Save: </label>
-		<input type='text' id='chaSav' name='chaSav'><br>
-	</div>
-
-
-	<br>
-	<div>
-		Moded Skill Checks (only fill text boxes for modified Skill Checks):<br>
-		<label for='acrobatics'>Acrobatics: </label>
-		<input type='text' id='acrobatics' name='acrobatics'><br>
-
-		<label for='animalHandling'>Animal  Handling: </label>
-		<input type='text' id='animalHandling' name='animalHandling'><br>
-
-		<label for='arcana'>Arcana: </label>
-		<input type='text' id='arcana' name='arcana'><br>
-
-		<label for='athletics'>Athletics: </label>
-		<input type='text' id='athletics' name='athletics'><br>
-
-		<label for='deception'>Deception: </label>
-		<input type='text' id='deception' name='deception'><br>
-
-		<label for='history'>History: </label>
-		<input type='text' id='history' name='history'><br>
-
-		<label for='insight'>Insight: </label>
-		<input type='text' id='insight' name='insight'><br>
-
-		<label for='intimidation'>Intimidation: </label>
-		<input type='text' id='intimidation' name='intimidation'><br>
-
-		<label for='investigation'>Investigation: </label>
-		<input type='text' id='investigation' name='investigation'><br>
-
-		<label for='medicine'>Medicine: </label>
-		<input type='text' id='medicine' name='medicine'><br>
-
-		<label for='nature'>Nature: </label>
-		<input type='text' id='nature' name='nature'><br>
-
-		<label for='perception'>Perception: </label>
-		<input type='text' id='perception' name='perception'><br>
-
-		<label for='performance'>Performance: </label>
-		<input type='text' id='performance' name='performance'><br>
-
-		<label for='persuasion'>Persuasion: </label>
-		<input type='text' id='persuasion' name='persuasion'><br>
-
-		<label for='religion'>Religion: </label>
-		<input type='text' id='religion' name='religion'><br>
-
-		<label for='SoH'>Sleight of Hand: </label>
-		<input type='text' id='SoH' name='SoH'><br>
-
-		<label for='stealth'>Stealth: </label>
-		<input type='text' id='stealth' name='stealth'><br>
-
-		<label for='survival'>Survival: </label>
-		<input type='text' id='survival' name='survival'><br>
-	</div>
-
 	<br>
 	<input type="submit" value="Submit">
 </form>

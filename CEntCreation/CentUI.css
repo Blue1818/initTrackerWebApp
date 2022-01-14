@@ -1,0 +1,57 @@
+.grid-container {
+    display:inline-grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+label {
+    font-family: "Times New Roman", Times, serif;
+}
+
+div {
+
+    
+    border:10px solid #54c428;
+    margin:0px;
+    padding:0px;
+}
+
+.firstBlock {
+    width:290px;
+    height:100px;
+
+    color:rgb(119, 93, 93);
+    border:10px solid #cccccc;
+    /* border-top:10px solid #cccccc; */
+    margin:0px;
+    /* margin-right:900px; */
+    padding:0px;
+}
+
+.abilScores {
+    width:290px;
+    height:200px;
+
+    
+    margin:0px;
+    padding:0px;
+}
+
+.abilSaves {
+    width:290px;
+    height:200px;
+
+    /* border:0px; */
+    margin:0px;
+    padding:0px;
+}
+
+.skillChecks {
+    
+    
+    
+
+    grid-column: 2;
+    grid-row: 1 / span 3;
+}
