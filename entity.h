@@ -51,7 +51,7 @@ class entity
     // roll -> get random int 1 to 20, assign to rollVal. (reroll on 1 if lucky = true)
     void roll();
     // signed int getInit -> (rollVal + fullMod())
-    
+    int getInit() { return (rollVal + fullMod()); }
 
 
 };
