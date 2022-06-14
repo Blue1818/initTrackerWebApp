@@ -1,0 +1,18 @@
+class: entity
+
+vars:
+name -> string
+rollVal -> int from 1 - 20 representing the die value
+initMod -> signed moddifier to init excluding dex
+dexScore -> unsigned int (used to determin dexmod)
+lucky -> binary val for rerolling 1's
+
+methods:
+default constructor() -> set everything to 0
+constructor(name, rollVal, initMod, dexScore, lucky)
+signed int dexmod -> ((desScore / 2) - 5)
+signed int fullMod -> (dexmod + initMod) 
+getters and setters
+roll -> get random int 1 to 20, assign to rollVal. (reroll on 1 if lucky = true)
+signed int getInit -> (rollVal + fullMod())
+
