@@ -31,4 +31,9 @@ int entity::dexmod()
 void entity::roll()
 {
     rollVal = rand() % 20 + 1;
+    //if 1 is rolled and lucky = true then reroll
+    if ((rollVal == 1) && (lucky == true))
+    {
+        rollVal = rand() % 20 + 1;
+    }
 }
