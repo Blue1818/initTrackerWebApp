@@ -35,7 +35,11 @@ class entity
     int getdexScore() { return dexScore; }
     bool getlucky() { return lucky; }
     //setters
-
+    void setname(string name) { this->name = name; }
+    void setrollVal(int rollVal) { this->rollVal = rollVal; }
+    void setinitMod(int initMod) { this->initMod = initMod; }
+    void setdexScore(int dexScore) { this->dexScore = dexScore; }
+    void setlucky(bool lucky) { this->lucky = lucky; }
     // signed int dexmod -> ((dexScore / 2) - 5)
     int dexmod();
     // signed int fullMod -> (dexmod + initMod) 
