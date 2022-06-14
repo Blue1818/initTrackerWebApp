@@ -31,7 +31,7 @@ class entity
     // default constructor() -> set everything to 0
     entity();
     // constructor(name, rollVal, initMod, dexScore, lucky)
-    entity(string name, int rollVal, int initMod, int dexScore, bool lucky);
+    entity(string name, int initMod, int dexScore, bool lucky);
     // getters
     string getname() { return name; }
     int getrollVal() { return rollVal; }
