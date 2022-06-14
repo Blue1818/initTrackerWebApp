@@ -27,6 +27,7 @@ class entity
     // default constructor() -> set everything to 0
     entity();
     // constructor(name, rollVal, initMod, dexScore, lucky)
+    entity(string name, int rollVal, int initMod, int dexScore, bool lucky);
     // signed int dexmod -> ((desScore / 2) - 5)
     // signed int fullMod -> (dexmod + initMod) 
     // getters and setters
