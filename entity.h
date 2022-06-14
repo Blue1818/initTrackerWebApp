@@ -28,7 +28,8 @@ class entity
     entity();
     // constructor(name, rollVal, initMod, dexScore, lucky)
     entity(string name, int rollVal, int initMod, int dexScore, bool lucky);
-    // signed int dexmod -> ((desScore / 2) - 5)
+    // signed int dexmod -> ((dexScore / 2) - 5)
+    int dexmod();
     // signed int fullMod -> (dexmod + initMod) 
     // getters and setters
     // roll -> get random int 1 to 20, assign to rollVal. (reroll on 1 if lucky = true)

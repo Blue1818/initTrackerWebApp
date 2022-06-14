@@ -22,3 +22,8 @@ entity::entity(string name, int rollVal, int initMod, int dexScore, bool lucky)
     this->dexScore = dexScore;
     this->lucky = lucky;
 }
+
+int entity::dexmod()
+{
+    return ((dexScore / 2) - 5);
+}
