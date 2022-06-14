@@ -27,3 +27,8 @@ int entity::dexmod()
 {
     return ((dexScore / 2) - 5);
 }
+
+void entity::roll()
+{
+    rollVal = rand() % 20 + 1;
+}

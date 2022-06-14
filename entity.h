@@ -2,9 +2,13 @@
 #define ENTITY_H
 
 #include <string>
+#include <stdio.h>      /* printf, scanf, puts, NULL */
+#include <stdlib.h>     /* srand, rand */
+#include <time.h>       /* time */
 
 using std::string;
 
+//set srand in main before calling roll
 
 class entity
 {
@@ -45,6 +49,7 @@ class entity
     // signed int fullMod -> (dexmod + initMod) 
     int fullMod();
     // roll -> get random int 1 to 20, assign to rollVal. (reroll on 1 if lucky = true)
+    void roll();
     // signed int getInit -> (rollVal + fullMod())
     
 
