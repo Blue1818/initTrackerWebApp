@@ -1,0 +1,13 @@
+This is a reverse polish notation calculator/interpeter that includes operators for dice (random numbers).
+operators supported in terms of order of operations (for referance when showing conventional examples):
+% roll number on top of stack. replaces putting a 1. ex. 12 % X is equivalant to -> 1 12 d
+d roll multiple (1st pop d 2nd pop); 1st pop = number of dice; 2nd pop = number of sides
+h maximum 
+l minimum
++ addition
+- subtraction   (1st pop - 2nd pop)
+* multiply
+/ divide        (1st pop / 2nd pop)
+----
+X or x end of instructions
+
