@@ -11,3 +11,4 @@ l minimum
 ----
 X or x end of instructions
 
+Take a string of inputs that are seprated by spaces.
