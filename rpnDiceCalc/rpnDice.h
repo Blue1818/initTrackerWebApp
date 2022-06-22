@@ -3,13 +3,15 @@
 
 #include <string>
 #include <stack>
+#include <cstdint>
+#include <sstream>      // std::stringstream
 
 
 class rpnDice
 {
     private:
-    std::stack work;
-    string expression;
+    std::stack<int8_t>  work;
+    std::stringstream expression;  //input from user
 
 
 
@@ -18,6 +20,10 @@ class rpnDice
     rpnDice()
     {
         this->expression = "X"
+    }
+    rpnDice()
+    {
+        
     }
 
 
