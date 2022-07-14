@@ -22,13 +22,18 @@ class initmanager
     private:
     //constructor
     initmanager() { cout << "-initManager created-" << endl;}
-    
+
+    //add entity
+    void addEntity(entity newEnt) { tieOrder.push_back(newEnt); }
 
     //shuffle tieOrder
     void shuffle();
 
     //sort tieOrder
-    void sorttieOrder();
+    void sortTieOrder();
+
+    //call roll for each entity
+    void rollAll();
 
     //start encounter
     void startEncounter();
