@@ -21,7 +21,7 @@ class initmanager
 
     private:
     //constructor
-    initmanager() { cout << "-initManager created-" << endl;}
+    initmanager() { cout << "-initManager created-" << endl; }
 
     //add entity
     void addEntity(entity newEnt) { tieOrder.push_back(newEnt); }
