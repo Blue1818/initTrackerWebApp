@@ -22,6 +22,7 @@ class initmanager
     private:
     //constructor
     initmanager() { cout << "-initManager created-" << endl;}
+    
 
     //shuffle tieOrder
     void shuffle();
