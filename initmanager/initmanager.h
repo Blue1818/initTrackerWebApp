@@ -1,11 +1,15 @@
 #ifndef INITMANAGER_H
 #define INITMANAGER_H
 
+#include <iostream>
 #include <vector>
 
 #include "entity/entity.h"
 
 using std::vector;
+using std::cout;
+using std::cin;
+using std::endl;
 
 class initmanager
 {
@@ -17,7 +21,7 @@ class initmanager
 
     private:
     //constructor
-    initmanager();
+    initmanager() { cout << "-initManager created-" << endl;}
 
     //shuffle tieOrder
     void shuffle();
