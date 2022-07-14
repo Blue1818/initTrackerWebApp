@@ -30,6 +30,8 @@ class entity
     // methods:
     // default constructor() -> set everything to 0
     entity();
+    // constructor for sorting
+    entity(int dexScore);
     // constructor(name, rollVal, initMod, dexScore, lucky)
     entity(string name, int initMod, int dexScore, bool lucky);
     // getters

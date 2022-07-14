@@ -14,6 +14,15 @@ entity::entity()
     lucky = false;
 }
 
+entity::entity(int dexScore)
+{
+    name = "default";
+    rollVal = 0;
+    initMod = 0;
+    this->dexScore = dexScore;
+    lucky = false;
+}
+
 entity::entity(string name, int initMod, int dexScore, bool lucky)
 {
     this->name = name;
