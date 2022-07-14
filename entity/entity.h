@@ -52,6 +52,9 @@ class entity
     void roll();
     // signed int getInit -> (rollVal + fullMod())
     int getInit() { return (rollVal + fullMod()); }
+    // is crit bool fuctions
+    bool isCritF(); //returns true if rollVal = 1
+    bool isCritS(); //returns true if rollVal = 20
 
 
 };

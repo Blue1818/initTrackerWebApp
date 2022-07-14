@@ -37,3 +37,25 @@ void entity::roll()
         rollVal = rand() % 20 + 1;
     }
 }
+
+bool entity::isCritF()
+{
+    if (rollVal == 1)
+    {
+        return true;
+    } else
+    {
+        return false;
+    }
+}
+
+bool entity::isCritS()
+{
+    if (rollVal == 1)
+    {
+        return true;
+    } else
+    {
+        return false;
+    }
+}
