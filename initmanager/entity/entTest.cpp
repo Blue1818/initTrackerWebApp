@@ -1,5 +1,5 @@
 #include <iostream>
-#include "entity.h"
+#include "entity/entity.h"
 
 using std::cout;
 using std::endl;
