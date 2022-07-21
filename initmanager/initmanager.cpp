@@ -21,12 +21,14 @@ void initmanager::shuffle()
 }
 
 
+/*
 void initmanager::sortTieOrder()
 {
     //merge sort into decending order.
     mergeSort(0, (tieOrder.size() - 1));
 
 }
+*/
 
 
 //merge Sort function
@@ -60,12 +62,12 @@ void initmanager::merge(int start, int mid, int end)
     // Create Array R[1..sizeL+1]
     vector<entity> R;
     // Copy A[start..mid] to L
-    for (size_t i = start; i <= mid; i++)
+    for (int i = start; i <= mid; i++)
     {
         L.push_back(tieOrder.at(i));
     }
     // Copy A[mid+1..end] to R
-    for (size_t i = (mid + 1); i <= end; i++)
+    for (int i = (mid + 1); i <= end; i++)
     {
         R.push_back(tieOrder.at(i));
     }
@@ -99,12 +101,24 @@ void initmanager::merge(int start, int mid, int end)
 
 
 
-
-
 void initmanager::startEncounter()
 {
     //call shuffle to get order for dexscore ties.
     shuffle();
     //sort tieOrder vector
     sortTieOrder();
+}
+
+
+
+void initmanager::printTieOrder()
+{
+    cout << "Size = " << tieOrder.size() << endl;
+    cout << "Name: dexscore" << endl;
+
+    for (size_t i = 0; i < tieOrder.size(); i++)
+    {
+        cout << tieOrder.at(i).getname() << ": " << tieOrder.at(i).getdexScore() << endl;
+    }
+
 }

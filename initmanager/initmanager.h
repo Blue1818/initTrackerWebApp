@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <climits>
 
 #include "entity/entity.h"
 
@@ -21,7 +22,18 @@ class initmanager
 
     public:
     //constructor
-    initmanager() { cout << "-initManager created-" << endl; }
+    initmanager() 
+    {
+        //tieOrder.resize(0);
+        cout << "-initManager created-" << endl;
+    }
+
+    initmanager(string message)
+    {
+        cout << message << endl;
+        cout << "-initManager created-" << endl;
+
+    }
 
     //add entity
     void addEntity(entity newEnt) { tieOrder.push_back(newEnt); }
@@ -29,7 +41,7 @@ class initmanager
     //shuffle tieOrder
     void shuffle();
 
-    //sort the entities in tieOrder by dexscore.
+    //sort the entities in tieOrder by dexscore, decending.
     //use merge sort for efficiency and to keep dup dexscores in place.
     //ties have already been resoved in suffle step.
     void sortTieOrder() { mergeSort(0, (tieOrder.size() - 1)); }
@@ -50,7 +62,8 @@ class initmanager
     //player turn
     void runTurn(entity* character);
     
-
+    //printers
+    void printTieOrder();
 
 
 
