@@ -13,13 +13,13 @@ using std::endl;
 
 class initmanager
 {
-    public:
+    private:
     //vector to hold all entities in tie order.
     vector<entity> tieOrder;
 
 
 
-    private:
+    public:
     //constructor
     initmanager() { cout << "-initManager created-" << endl; }
 
