@@ -19,6 +19,10 @@ class initmanager
     vector<entity> tieOrder;
 
 
+    protected:
+    //merge sort functions
+    void mergeSort(int start, int end);
+    void merge(int start, int mid, int end);
 
     public:
     //constructor
@@ -45,10 +49,6 @@ class initmanager
     //use merge sort for efficiency and to keep dup dexscores in place.
     //ties have already been resoved in suffle step.
     void sortTieOrder() { mergeSort(0, (tieOrder.size() - 1)); }
-
-    //merge sort functions
-    void mergeSort(int start, int end);
-    void merge(int start, int mid, int end);
 
     //call roll for each entity
     void rollAll();
