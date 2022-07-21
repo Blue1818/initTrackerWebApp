@@ -32,6 +32,10 @@ class entity
     entity();
     // constructor for sorting
     entity(int dexScore);
+
+    // constructor for random dexScore (3 to 20) and initMod (0 - 4). lucky = false
+    entity(string name);
+
     // constructor(name, rollVal, initMod, dexScore, lucky)
     entity(string name, int initMod, int dexScore, bool lucky);
     // getters

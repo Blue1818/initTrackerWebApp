@@ -23,6 +23,15 @@ entity::entity(int dexScore)
     lucky = false;
 }
 
+entity::entity(string name)
+{
+    this->name = name;
+    this->rollVal = 0;
+    this->lucky = false;
+    this->initMod = rand() % 5;
+    this->dexScore = (rand() % 18) + 3
+}
+
 entity::entity(string name, int initMod, int dexScore, bool lucky)
 {
     this->name = name;
