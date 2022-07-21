@@ -29,7 +29,7 @@ entity::entity(string name)
     this->rollVal = 0;
     this->lucky = false;
     this->initMod = rand() % 5;
-    this->dexScore = (rand() % 18) + 3
+    this->dexScore = (rand() % 18) + 3;
 }
 
 entity::entity(string name, int initMod, int dexScore, bool lucky)
@@ -88,4 +88,6 @@ string entity::printTieMath()
     string output = name;
     output.append(": ");
     output.append(std::to_string(dexScore));
+    
+    return output;
 }
