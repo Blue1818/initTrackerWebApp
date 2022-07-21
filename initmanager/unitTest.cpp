@@ -14,7 +14,7 @@ int main()
     initmanager manager("this is a test message");
     entity* entptr = nullptr;
     int numE = 0;
-    char val = 'A';
+    //char val = 'A';
 
     //initalize random seed
     srand (time(NULL)); //set seed
@@ -26,13 +26,22 @@ int main()
 
     for(int i = 0; i < numE; i++)
     {
-        val++;
-        entptr = new entity((val + i));
+        string name = "Test #";
+        name.append(std::to_string(i + 1));
+        entptr = new entity((name));
         manager.addEntity(*entptr);
     }
 
-    manager.
+    //print inital order
+    manager.printTieOrder();
 
+    //order after shuffle
+    manager.shuffle();
+    manager.printTieOrder();
+
+    //after sorting
+    manager.sortTieOrder();
+    manager.printTieOrder();
 
 
 
