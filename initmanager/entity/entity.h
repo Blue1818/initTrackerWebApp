@@ -53,7 +53,7 @@ class entity
     // signed int dexmod -> ((dexScore / 2) - 5)
     int dexmod();
     // signed int fullMod -> (dexmod + initMod) 
-    int fullMod();
+    int fullMod() { return (dexmod() + initMod); }
     // roll -> get random int 1 to 20, assign to rollVal. (reroll on 1 if lucky = true)
     void roll();
     // signed int getInit -> (rollVal + fullMod())
@@ -62,6 +62,8 @@ class entity
     bool isCritF(); //returns true if rollVal = 1
     bool isCritS(); //returns true if rollVal = 20
 
+    //print images:
+    string printTieMath();
 
 };
 
