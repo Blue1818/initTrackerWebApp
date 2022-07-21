@@ -77,3 +77,15 @@ bool entity::isCritS()
         return false;
     }
 }
+
+
+string entity::printTieMath()
+{
+    //ex.
+    //name: dexScore
+
+    //start with the name
+    string output = name;
+    output.append(": ");
+    output.append(std::to_string(dexScore));
+}
