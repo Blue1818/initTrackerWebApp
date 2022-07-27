@@ -17,7 +17,7 @@ class entity
     // name -> string
     string name;
     // rollVal -> int from 1 - 20 representing the die value
-    int rollVal;
+    //int rollVal;
     // initMod -> signed moddifier to init excluding dex
     int initMod;
     // dexScore -> unsigned int (used to determin dexmod)
@@ -38,15 +38,17 @@ class entity
 
     // constructor(name, rollVal, initMod, dexScore, lucky)
     entity(string name, int initMod, int dexScore, bool lucky);
+
+    
     // getters
     string getname() { return name; }
-    int getrollVal() { return rollVal; }
+    //int getrollVal() { return rollVal; }
     int getinitMod() { return initMod; }
     int getdexScore() { return dexScore; }
     bool getlucky() { return lucky; }
     //setters
     void setname(string name) { this->name = name; }
-    void setrollVal(int rollVal) { this->rollVal = rollVal; }
+    //void setrollVal(int rollVal) { this->rollVal = rollVal; }
     void setinitMod(int initMod) { this->initMod = initMod; }
     void setdexScore(int dexScore) { this->dexScore = dexScore; }
     void setlucky(bool lucky) { this->lucky = lucky; }
@@ -55,9 +57,9 @@ class entity
     // signed int fullMod -> (dexmod + initMod) 
     int fullMod() { return (dexmod() + initMod); }
     // roll -> get random int 1 to 20, assign to rollVal. (reroll on 1 if lucky = true)
-    void roll();
+    //void roll();
     // signed int getInit -> (rollVal + fullMod())
-    int getInit() { return (rollVal + fullMod()); }
+    //int getInit() { return (rollVal + fullMod()); }
     // is crit bool fuctions
     bool isCritF(); //returns true if rollVal = 1
     bool isCritS(); //returns true if rollVal = 20

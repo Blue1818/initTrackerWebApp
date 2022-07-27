@@ -46,7 +46,7 @@ int entity::dexmod()
     return ((dexScore / 2) - 5);
 }
 
-void entity::roll()
+/* void entity::roll()
 {
     rollVal = rand() % 20 + 1;
     //if 1 is rolled and lucky = true then reroll
@@ -54,9 +54,9 @@ void entity::roll()
     {
         rollVal = rand() % 20 + 1;
     }
-}
+} */
 
-bool entity::isCritF()
+/* bool entity::isCritF()
 {
     if (rollVal == 1)
     {
@@ -77,7 +77,7 @@ bool entity::isCritS()
         return false;
     }
 }
-
+ */
 
 string entity::printTieMath()
 {
