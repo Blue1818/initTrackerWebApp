@@ -107,6 +107,8 @@ void initmanager::startEncounter()
     shuffle();
     //sort tieOrder vector
     sortTieOrder();
+    //initialize mod vector
+    mod.resize(tieOrder.size(), 0);
 }
 
 

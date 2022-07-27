@@ -17,6 +17,7 @@ class initmanager
     private:
     //vector to hold all entities in tie order.
     vector<entity> tieOrder;
+    vector<int> mod;
 
 
     protected:
