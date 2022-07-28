@@ -100,6 +100,13 @@ void initmanager::merge(int start, int mid, int end)
 }
 
 
+void initmanager::addEntity(entity newEnt)
+{
+    creep* creepptr = nullptr;
+    creepptr = new creep(newEnt);
+    tieOrder.push_back(*creepptr);
+}
+
 
 void initmanager::startEncounter()
 {
@@ -122,3 +129,4 @@ void initmanager::printTieOrder()
     }
 
 }
+

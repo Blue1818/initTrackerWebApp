@@ -16,7 +16,7 @@ class initmanager
 {
     private:
     //vector to hold all entities in tie order.
-    vector<entity> tieOrder;
+    vector<creep> tieOrder;
 
 
     protected:
@@ -40,7 +40,7 @@ class initmanager
     }
 
     //add entity
-    void addEntity(entity newEnt) { tieOrder.push_back(newEnt); }
+    void addEntity(entity newEnt); //{ tieOrder.push_back(newEnt); }
 
     //shuffle tieOrder
     void shuffle();
