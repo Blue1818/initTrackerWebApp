@@ -20,7 +20,7 @@ void creep::roll()
 
 bool creep::isCritF()
 {
-    if (rollVal == 1)
+    if (rollval == 1)
     {
         return true;
     } else
@@ -29,9 +29,9 @@ bool creep::isCritF()
     }
 }
 
-bool entity::isCritS()
+bool creep::isCritS()
 {
-    if (rollVal == 1)
+    if (rollval == 20)
     {
         return true;
     } else

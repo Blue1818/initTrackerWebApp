@@ -25,6 +25,10 @@ class creep : public entity
     
     int result() { return (fullMod() + actMod + rollval); }
 
+    //crit checks
+    bool isCritF();
+    bool isCritS();
+
 };
 
 
