@@ -281,6 +281,7 @@ vector<creep*> initmanager::getroundOrder()
         }
         #endif
     }
+    return order;
 }
 
 
