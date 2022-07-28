@@ -46,38 +46,6 @@ int entity::dexmod()
     return ((dexScore / 2) - 5);
 }
 
-/* void entity::roll()
-{
-    rollVal = rand() % 20 + 1;
-    //if 1 is rolled and lucky = true then reroll
-    if ((rollVal == 1) && (lucky == true))
-    {
-        rollVal = rand() % 20 + 1;
-    }
-} */
-
-/* bool entity::isCritF()
-{
-    if (rollVal == 1)
-    {
-        return true;
-    } else
-    {
-        return false;
-    }
-}
-
-bool entity::isCritS()
-{
-    if (rollVal == 1)
-    {
-        return true;
-    } else
-    {
-        return false;
-    }
-}
- */
 
 string entity::printTieMath()
 {
