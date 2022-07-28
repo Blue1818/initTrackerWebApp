@@ -299,7 +299,7 @@ int initmanager::getSize()
 }
 
 
-void runTurn(creep* character)
+void initmanager::runTurn(creep* character)
 {
     int input = 0;
 
