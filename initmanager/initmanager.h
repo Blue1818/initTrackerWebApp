@@ -5,7 +5,7 @@
 #include <vector>
 #include <climits>
 
-#include "entity/entity.h"
+#include "creep/creep.h"
 
 using std::vector;
 using std::cout;
