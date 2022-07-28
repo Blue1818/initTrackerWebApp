@@ -61,7 +61,7 @@ class initmanager
 
     //run round
     void runRound();
-
+    vector<creep*> getroundOrder();
     //player turn
     void runTurn(entity* character);
     
