@@ -22,7 +22,10 @@ class initmanager
     protected:
     //merge sort functions
     void mergeSort(int start, int end);
+    //vector<creep> mergeSorter(vector<creep> vect, int start, int end);
     void merge(int start, int mid, int end);
+    //vector<creep> merger(vector<creep> vect, int start, int mid, int end);
+
 
     public:
     //constructor
@@ -60,7 +63,7 @@ class initmanager
     void runRound();
 
     //player turn
-    //void runTurn(entity* character);
+    void runTurn(entity* character);
     
     //printers
     void printTieOrder();
