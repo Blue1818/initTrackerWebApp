@@ -60,7 +60,7 @@ class initmanager
     void runRound();
 
     //player turn
-    void runTurn(entity* character);
+    //void runTurn(entity* character);
     
     //printers
     void printTieOrder();
