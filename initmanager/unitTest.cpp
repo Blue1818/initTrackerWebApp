@@ -35,6 +35,10 @@ int main()
     //print inital order
     manager.printTieOrder();
 
+    //add roll to creep
+    manager.rollAll();
+    manager.printTieOrder();
+
     //order after shuffle
     manager.shuffle();
     manager.printTieOrder();
@@ -43,7 +47,9 @@ int main()
     manager.sortTieOrder();
     manager.printTieOrder();
 
-
+    //add roll to creep
+    manager.rollAll();
+    manager.printTieOrder();
 
     return 0;
 }
