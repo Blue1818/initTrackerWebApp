@@ -18,3 +18,25 @@ void creep::roll()
     }
 }
 
+bool creep::isCritF()
+{
+    if (rollVal == 1)
+    {
+        return true;
+    } else
+    {
+        return false;
+    }
+}
+
+bool entity::isCritS()
+{
+    if (rollVal == 1)
+    {
+        return true;
+    } else
+    {
+        return false;
+    }
+}
+
