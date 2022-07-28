@@ -26,7 +26,6 @@ class initmanager
     void merge(int start, int mid, int end);
     //vector<creep> merger(vector<creep> vect, int start, int mid, int end);
 
-
     public:
     //constructor
     initmanager() 
@@ -41,6 +40,9 @@ class initmanager
         cout << "-initManager created-" << endl;
 
     }
+
+    
+    int getSize();
 
     //add entity
     void addEntity(entity newEnt); //{ tieOrder.push_back(newEnt); }
@@ -61,9 +63,10 @@ class initmanager
 
     //run round
     void runRound();
+    //roll and returns roundOrder in ptrs
     vector<creep*> getroundOrder();
     //player turn
-    void runTurn(entity* character);
+    void runTurn(creep* character);
     
     //printers
     void printTieOrder();
