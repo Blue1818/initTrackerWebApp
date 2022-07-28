@@ -52,6 +52,7 @@ int main()
     manager.printTieOrder();
 
     //run round
+    cout << "now lets run the round" << endl;
     manager.runRound();
 
     return 0;
