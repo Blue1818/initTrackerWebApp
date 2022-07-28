@@ -31,7 +31,7 @@ void initmanager::sortTieOrder()
 */
 
 
-//merge Sort function
+//merge Sort function for initalization
 void initmanager::mergeSort(int start, int end)
 {
     // IF start < end
@@ -48,7 +48,7 @@ void initmanager::mergeSort(int start, int end)
     }
 }
 
-//merge step
+//merge step for initalization
 void initmanager::merge(int start, int mid, int end)
 {
     //make a entity with -infinity dexscore
@@ -98,6 +98,75 @@ void initmanager::merge(int start, int mid, int end)
         }
     }
 }
+
+/* //merge Sort function
+vector<creep> initmanager::mergeSorter(vector<creep> vect, int start, int end)
+{
+    // IF start < end
+    if (start < end)
+    {
+        //     mid = (start+end)/2
+        int mid = (start+end)/2;
+        //     Merge-Sort(A,start,mid)
+        mergeSort(start,mid);
+        //     Merge-Sort(A,mid+1,end)
+        mergeSort((mid + 1), end);
+        //     Merge(A,start,mid,end)
+        merge(start, mid, end);
+    }
+}
+
+//merge step
+vector<creep> initmanager::merger(vector<creep> vect, int start, int mid, int end)
+{
+    //make a entity with -infinity dexscore
+    entity lowEnt(INT_MIN);
+    // sizeR = mid-start+1
+    //int sizeR = mid - start + 1;
+    // sizeL = end-mid
+    //int sizeL = end - mid;
+    // Create Array L[1..sizeR+1]
+    vector<entity> L;
+    // Create Array R[1..sizeL+1]
+    vector<entity> R;
+    // Copy A[start..mid] to L
+    for (int i = start; i <= mid; i++)
+    {
+        L.push_back(tieOrder.at(i));
+    }
+    // Copy A[mid+1..end] to R
+    for (int i = (mid + 1); i <= end; i++)
+    {
+        R.push_back(tieOrder.at(i));
+    }
+    // L[sizeR+1] = R[sizeL+1] = -∞
+    //basicly add -infinity to the end of L and R
+    L.push_back(lowEnt);
+    R.push_back(lowEnt);
+    // i = j = 0
+    int i = 0;
+    int j = 0;
+    // FOR k from start to end
+    for (int k = start; k <= end; k++)
+    {
+        // IF L[i] >= R[j]
+        if (L.at(i).getdexScore() >= R.at(j).getdexScore())
+        {
+            // A[k] = L[i]
+            tieOrder.at(k) = L.at(i);
+            // Increase i
+            i++;
+        } else
+        {
+            // ELSE
+            // A[k] = R[j]
+            tieOrder.at(k) = R.at(j);
+            // Increase j
+            j++;
+        }
+    }
+} 
+*/
 
 
 void initmanager::addEntity(entity newEnt)
