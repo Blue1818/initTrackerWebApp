@@ -209,3 +209,95 @@ void initmanager::printTieOrder()
     }
 }
 
+
+void initmanager::runRound()
+{
+    vector<creep*> roundOrder = getroundOrder();
+
+    for (size_t i = 0; i < roundOrder.size(); i++)
+    {
+        runTurn(roundOrder.at(i));
+    }
+
+}
+
+
+//returns a vector of pointers that have been rolled
+//sorted with a selection sort and binary search. decending order
+vector<creep*> initmanager::getroundOrder()
+{
+    vector<creep*> order;
+
+    //roll all creeps
+    rollAll();
+
+    //selection sort
+    for (int i = 0; i < getSize(); i++)
+    {
+        //check if alive
+
+        int key = tieOrder.at(i).result();
+        int low = 0;
+        int high = static_cast<int>(order.size());
+        //use binary search to find spot to insert i
+        while(low != high)
+        {
+            vector<creep*>::iterator head = order.begin();
+            int mid = (low + high) / 2;
+            if ((key >= order.at(mid)->result()) && (key < order.at(mid - 1)->result()))
+            {
+                order.insert(head+mid, &tieOrder.at(i));
+                low = high;
+            } else if (key < order.at(mid)->result()) // key is on right side
+            {
+                low = mid + 1;
+            } else // key of on the left side
+            {
+                high = mid - 1;
+            }
+        }
+    }
+}
+
+
+
+
+//get size of tieOrder excluding dead people.
+//returns a int
+int initmanager::getSize()
+{
+    int returnVal = static_cast<int>(tieOrder.size());
+    //find the number of dead people
+    int dead = 0;
+    //loop, count dead
+
+    returnVal -= dead;
+    return returnVal;
+}
+
+void runTurn(creep* character)
+{
+    int input = 0;
+
+    //header
+    cout << character->getname() << "'s turn: " << character->result() << endl;
+    
+#if 1
+    cout << "debug roll: " << character->getroll() << endl
+         << "  full mod: " << character->fullMod() << endl
+         << "    actmod: " << character->getactMod() << endl;
+#endif
+
+    do
+    {
+        //print menu
+        //take action
+        
+        //assign damage
+
+        //make someone as dead
+
+        //etc
+    } while (input != 0);
+    
+}
