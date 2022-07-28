@@ -125,8 +125,9 @@ void initmanager::printTieOrder()
 
     for (size_t i = 0; i < tieOrder.size(); i++)
     {
-        cout << tieOrder.at(i).getname() << ": " << tieOrder.at(i).getdexScore() << endl;
+        cout << tieOrder.at(i).getname() << ": " << tieOrder.at(i).getdexScore() << " : "
+            << tieOrder.at(i).getactMod() << " : "
+            << tieOrder.at(i).getroll() << endl;
     }
-
 }
 
