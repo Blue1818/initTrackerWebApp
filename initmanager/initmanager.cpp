@@ -110,7 +110,7 @@ void initmanager::addEntity(entity newEnt)
 
 void initmanager::rollAll()
 {
-    for (int i = 0; i < tieOrder.size(); i++)
+    for (size_t i = 0; i < tieOrder.size(); i++)
     {
         tieOrder.at(i).roll();
     }
