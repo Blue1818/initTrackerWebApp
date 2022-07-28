@@ -216,6 +216,9 @@ void initmanager::runRound()
 
     for (size_t i = 0; i < roundOrder.size(); i++)
     {
+        //set actmod to 0
+        roundOrder.at(i)->setactMod(0);
+        //run turn
         runTurn(roundOrder.at(i));
     }
 
