@@ -40,3 +40,10 @@ bool creep::isCritS()
     }
 }
 
+/* void runTurn()
+{
+    //loop til exit
+        //print menu for user
+
+        //do the thing
+} */

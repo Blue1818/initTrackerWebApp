@@ -21,13 +21,15 @@ class creep : public entity
 
     void roll();
 
-    void runTurn();
+    // void runTurn();
+    void userAction();
     
     int result() { return (fullMod() + actMod + rollval); }
 
     //crit checks
     bool isCritF();
     bool isCritS();
+
 
 };
 
