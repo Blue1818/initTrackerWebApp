@@ -51,5 +51,8 @@ int main()
     manager.rollAll();
     manager.printTieOrder();
 
+    //run round
+    manager.runRound();
+
     return 0;
 }

@@ -209,6 +209,15 @@ void initmanager::printTieOrder()
     }
 }
 
+void initmanager::printroundOrder(vector<creep*> vect)
+{
+    for (size_t i = 0; i < vect.size(); i++)
+    {
+        cout << vect.at(i)->getname() << " : " << vect.at(i)->result() << endl;
+    }
+    cout << endl;
+}
+
 
 void initmanager::runRound()
 {
@@ -261,6 +270,16 @@ vector<creep*> initmanager::getroundOrder()
                 high = mid - 1;
             }
         }
+        #if 1
+        //check the array
+        for (size_t j = 1; j < order.size(); j++)
+        {
+            if (order.at(j-1)->result() < order.at(j)->result())
+            {
+                cout << "error at " << j << endl;
+            }
+        }
+        #endif
     }
 }
 
