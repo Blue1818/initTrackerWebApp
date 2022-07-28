@@ -223,6 +223,10 @@ void initmanager::runRound()
 {
     vector<creep*> roundOrder = getroundOrder();
 
+    #if 1
+        cout << "flagAfter" << endl;
+    #endif
+
     printroundOrder(roundOrder);
 
 
@@ -245,23 +249,45 @@ vector<creep*> initmanager::getroundOrder()
     //roll all creeps
     rollAll();
 
+    cout << "flag1 " << getSize() <<  endl;
+    
+    //prime it
+    order.push_back(&tieOrder.at(0));
+
     //selection sort
-    for (int i = 0; i < getSize(); i++)
+    for (int i = 1; i < getSize(); i++)
     {
+        vector<creep*>::iterator head = order.begin();
+
         //check if alive
 
         int key = tieOrder.at(i).result();
         int low = 0;
-        int high = static_cast<int>(order.size());
+        int high = static_cast<int>(order.size()) - 1;
+
+        #if 1
+            cout << "low : high" << endl;
+            cout << low << " : " << high << endl;
+        #endif
+
+        //FIX THIS!!!!!!!
         //use binary search to find spot to insert i
-        while(low != high)
+        while((high - low) > 1)
         {
-            vector<creep*>::iterator head = order.begin();
+            #if 1
+                cout << endl << low << " : " << high << endl;
+            #endif
+
+            head = order.begin();
             int mid = (low + high) / 2;
             if ((key >= order.at(mid)->result()) && (key < order.at(mid - 1)->result()))
             {
                 order.insert(head+mid, &tieOrder.at(i));
-                low = high;
+                #if 1
+                    cout << "AA" << endl;
+                    cout << tieOrder.at(i).result();
+                #endif
+                break;
             } else if (key < order.at(mid)->result()) // key is on right side
             {
                 low = mid + 1;
@@ -270,6 +296,27 @@ vector<creep*> initmanager::getroundOrder()
                 high = mid - 1;
             }
         }
+
+        //check if order been filled been filled
+        head = order.begin();
+        /* if (low == high)
+        {
+            order.push_back(&tieOrder.at(i));
+        } else */ if ((high - low) <= 1)
+        {
+            if (key >= order.at(low)->result())
+            {
+                order.insert(head+low, &tieOrder.at(i));
+            } else if (key < order.at(high)->result())
+            {
+                order.insert(head+high, &tieOrder.at(i));
+            }
+            #if 1
+                cout << "BB" << endl;
+                cout << tieOrder.at(i).result();
+            #endif
+        }
+
         #if 1
         //check the array
         for (size_t j = 1; j < order.size(); j++)
