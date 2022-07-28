@@ -40,10 +40,10 @@ bool creep::isCritS()
     }
 }
 
-/* void runTurn()
+void creep::userAction()
 {
-    //loop til exit
-        //print menu for user
+    //print menu for actions
 
-        //do the thing
-} */
+    //modify actMod accordingly
+    
+}
