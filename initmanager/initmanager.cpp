@@ -108,6 +108,15 @@ void initmanager::addEntity(entity newEnt)
 }
 
 
+void initmanager::rollAll()
+{
+    for (int i = 0; i < tieOrder.size(); i++)
+    {
+        tieOrder.at(i).roll();
+    }
+}
+
+
 void initmanager::startEncounter()
 {
     //call shuffle to get order for dexscore ties.
