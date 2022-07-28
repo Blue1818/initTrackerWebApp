@@ -7,23 +7,23 @@ class creep : public entity
 {
     private:
     int actMod;
-    int roll; // 1 - 20
+    int rollval; // 1 - 20
 
     public:
     //constructor
     creep();
     //setters
     void setactMod(int actMod) { this->actMod = actMod; }
-    void setroll(int roll) { this->roll = roll; }
+    void setroll(int rollval) { this->rollval = rollval; }
     //getters
     int getactMod() { return actMod; }
-    int getroll() { return roll; }
+    int getroll() { return rollval; }
 
     void roll();
 
     void runTurn();
     
-    int result() { return (fullMod() + actMod + roll); }
+    int result() { return (fullMod() + actMod + rollval); }
 
 };
 
