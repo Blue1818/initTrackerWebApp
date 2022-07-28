@@ -70,7 +70,7 @@ class initmanager
     
     //printers
     void printTieOrder();
-
+    void printroundOrder(vector<creep*> vect);
 
 
 };
