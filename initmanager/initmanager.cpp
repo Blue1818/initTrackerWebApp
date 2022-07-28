@@ -214,13 +214,15 @@ void initmanager::runRound()
 {
     vector<creep*> roundOrder = getroundOrder();
 
+    printroundOrder(roundOrder);
+
+
     for (size_t i = 0; i < roundOrder.size(); i++)
     {
-        //set actmod to 0
-        roundOrder.at(i)->setactMod(0);
         //run turn
         runTurn(roundOrder.at(i));
     }
+
 
 }
 
@@ -263,8 +265,6 @@ vector<creep*> initmanager::getroundOrder()
 }
 
 
-
-
 //get size of tieOrder excluding dead people.
 //returns a int
 int initmanager::getSize()
@@ -278,18 +278,22 @@ int initmanager::getSize()
     return returnVal;
 }
 
+
 void runTurn(creep* character)
 {
     int input = 0;
 
     //header
     cout << character->getname() << "'s turn: " << character->result() << endl;
-    
+
 #if 1
     cout << "debug roll: " << character->getroll() << endl
          << "  full mod: " << character->fullMod() << endl
          << "    actmod: " << character->getactMod() << endl;
 #endif
+
+    //set actmod to 0
+    character->setactMod(0);
 
     do
     {
