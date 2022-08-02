@@ -1,0 +1,15 @@
+1. Fix binary search in initiative round over selection sort 
+
+2. Write the turn menus
+
+3. write action fuction
+
+4. make entity maker form
+
+5. add hp tracking.
+
+6. add hp editing from the combat round menus
+
+7. rewrite in in javascript electron or builder gnome
+
+8. 
