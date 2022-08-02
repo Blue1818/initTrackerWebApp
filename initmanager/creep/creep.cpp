@@ -8,6 +8,12 @@ creep::creep()
     rollval = 0;
 }
 
+creep::creep(int rollval)
+{
+    actMod = 0;
+    this->rollval = rollval;
+}
+
 void creep::roll()
 {
     rollval = rand() % 20 + 1;

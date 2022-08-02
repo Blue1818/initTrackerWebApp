@@ -121,8 +121,8 @@ vector<creep*> initmanager::mergeSortptr(vector<creep*> vect, int start, int end
 vector<creep*> initmanager::mergeptr(vector<creep*> vect, int start, int mid, int end)
 {
     //make a entity with -infinity dexscore
-    entity lowEnt(INT_MIN);
-    creep* lowcreep = new creep(lowEnt);
+    //entity lowEnt(INT_MIN);
+    creep* lowcreep = new creep(INT_MIN);
     // sizeR = mid-start+1
     //int sizeR = mid - start + 1;
     // sizeL = end-mid
@@ -143,8 +143,8 @@ vector<creep*> initmanager::mergeptr(vector<creep*> vect, int start, int mid, in
     }
     // L[sizeR+1] = R[sizeL+1] = -∞
     //basicly add -infinity to the end of L and R
-    L.push_back(lowEnt);
-    R.push_back(lowEnt);
+    L.push_back(lowcreep);
+    R.push_back(lowcreep);
     // i = j = 0
     int i = 0;
     int j = 0;
@@ -152,17 +152,17 @@ vector<creep*> initmanager::mergeptr(vector<creep*> vect, int start, int mid, in
     for (int k = start; k <= end; k++)
     {
         // IF L[i] >= R[j]
-        if (L.at(i).getdexScore() >= R.at(j).getdexScore())
+        if (L.at(i)->result() >= R.at(j)->result())
         {
             // A[k] = L[i]
-            tieOrder.at(k) = L.at(i);
+            vect.at(k) = L.at(i);
             // Increase i
             i++;
         } else
         {
             // ELSE
             // A[k] = R[j]
-            tieOrder.at(k) = R.at(j);
+            vect.at(k) = R.at(j);
             // Increase j
             j++;
         }
