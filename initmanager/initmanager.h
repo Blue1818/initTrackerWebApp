@@ -22,9 +22,9 @@ class initmanager
     protected:
     //merge sort functions
     void mergeSort(int start, int end);
-    //vector<creep> mergeSorter(vector<creep> vect, int start, int end);
+    vector<creep*> mergeSortptr(vector<creep*> vect, int start, int end);
     void merge(int start, int mid, int end);
-    //vector<creep> merger(vector<creep> vect, int start, int mid, int end);
+    vector<creep*> mergeptr(vector<creep*> vect, int start, int mid, int end);
 
     public:
     //constructor

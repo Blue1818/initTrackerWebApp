@@ -99,8 +99,8 @@ void initmanager::merge(int start, int mid, int end)
     }
 }
 
-/* //merge Sort function
-vector<creep> initmanager::mergeSorter(vector<creep> vect, int start, int end)
+//merge Sort function
+vector<creep*> initmanager::mergeSortptr(vector<creep*> vect, int start, int end)
 {
     // IF start < end
     if (start < end)
@@ -108,16 +108,17 @@ vector<creep> initmanager::mergeSorter(vector<creep> vect, int start, int end)
         //     mid = (start+end)/2
         int mid = (start+end)/2;
         //     Merge-Sort(A,start,mid)
-        mergeSort(start,mid);
+        vect = mergeSortptr(vect, start, mid);
         //     Merge-Sort(A,mid+1,end)
-        mergeSort((mid + 1), end);
+        vect = mergeSortptr(vect, (mid + 1), end);
         //     Merge(A,start,mid,end)
-        merge(start, mid, end);
+        vect = mergeptr(vect, start, mid, end);
     }
+    return vect;
 }
 
 //merge step
-vector<creep> initmanager::merger(vector<creep> vect, int start, int mid, int end)
+vector<creep*> initmanager::mergeptr(vector<creep*> vect, int start, int mid, int end)
 {
     //make a entity with -infinity dexscore
     entity lowEnt(INT_MIN);
@@ -126,18 +127,18 @@ vector<creep> initmanager::merger(vector<creep> vect, int start, int mid, int en
     // sizeL = end-mid
     //int sizeL = end - mid;
     // Create Array L[1..sizeR+1]
-    vector<entity> L;
+    vector<creep*> L;
     // Create Array R[1..sizeL+1]
-    vector<entity> R;
+    vector<creep*> R;
     // Copy A[start..mid] to L
     for (int i = start; i <= mid; i++)
     {
-        L.push_back(tieOrder.at(i));
+        L.push_back(vect.at(i));
     }
     // Copy A[mid+1..end] to R
     for (int i = (mid + 1); i <= end; i++)
     {
-        R.push_back(tieOrder.at(i));
+        R.push_back(vect.at(i));
     }
     // L[sizeR+1] = R[sizeL+1] = -∞
     //basicly add -infinity to the end of L and R
@@ -165,8 +166,9 @@ vector<creep> initmanager::merger(vector<creep> vect, int start, int mid, int en
             j++;
         }
     }
+    return vect;
 } 
-*/
+
 
 
 void initmanager::addEntity(entity newEnt)
