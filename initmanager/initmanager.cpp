@@ -122,6 +122,7 @@ vector<creep*> initmanager::mergeptr(vector<creep*> vect, int start, int mid, in
 {
     //make a entity with -infinity dexscore
     entity lowEnt(INT_MIN);
+    creep* lowcreep = new creep(lowEnt);
     // sizeR = mid-start+1
     //int sizeR = mid - start + 1;
     // sizeL = end-mid
