@@ -128,7 +128,7 @@ vector<creep*> initmanager::mergeptr(vector<creep*> vect, int start, int mid, in
 {
     //make a entity with -infinity dexscore
     //entity lowEnt(INT_MIN);
-    creep* lowcreep = new creep(-100);
+    creep* lowcreep = new creep(false);
     // sizeR = mid-start+1
     //int sizeR = mid - start + 1;
     // sizeL = end-mid
@@ -159,10 +159,64 @@ vector<creep*> initmanager::mergeptr(vector<creep*> vect, int start, int mid, in
         cout << L.size() << " : " << R.size() << endl;
     #endif
 
+
     // FOR k from start to end
     for (int k = start; k <= end; k++)
     {
-        // IF L[i] >= R[j]
+        //check crits
+        if (L.at(i)->isCritS() == R.at(j)->isCritS()) //check if crit success
+        {
+            if (L.at(i)->isCritF() == R.at(j)->isCritF()) //check if crit fail
+            {
+                // IF L[i] >= R[j]
+                if (L.at(i)->result() >= R.at(j)->result())
+                {
+                    // A[k] = L[i]
+                    vect.at(k) = L.at(i);
+                    // Increase i
+                    i++;
+                } else
+                {
+                    // ELSE
+                    // A[k] = R[j]
+                    vect.at(k) = R.at(j);
+                    // Increase j
+                    j++;
+                }
+            } else 
+            {
+                if (L.at(i)->isCritF() == false)
+                {   
+                    // A[k] = L[i]
+                    vect.at(k) = L.at(i);
+                    // Increase i
+                    i++;
+                } else 
+                {
+                    // ELSE
+                    // A[k] = R[j]
+                    vect.at(k) = R.at(j);
+                    // Increase j
+                    j++;
+                }
+            }
+        } else 
+        {
+            if (L.at(i)->isCritS() == true)
+            {
+                // A[k] = L[i]
+                vect.at(k) = L.at(i);
+                // Increase i
+                i++;
+            } else {
+                // ELSE
+                // A[k] = R[j]
+                vect.at(k) = R.at(j);
+                // Increase j
+                j++;
+            }
+        }
+        /* // IF L[i] >= R[j]
         if (L.at(i)->result() >= R.at(j)->result())
         {
             // A[k] = L[i]
@@ -176,7 +230,7 @@ vector<creep*> initmanager::mergeptr(vector<creep*> vect, int start, int mid, in
             vect.at(k) = R.at(j);
             // Increase j
             j++;
-        }
+        } */
     }
     return vect;
 } 
@@ -219,7 +273,8 @@ void initmanager::printTieOrder()
     {
         cout << tieOrder.at(i).getname() << ": " << tieOrder.at(i).getdexScore() << " : "
             << tieOrder.at(i).getactMod() << " : "
-            << tieOrder.at(i).getroll() << endl;
+            << tieOrder.at(i).getroll() << " : "
+            << tieOrder.at(i).getlucky() << endl;
     }
 }
 
@@ -248,6 +303,7 @@ void initmanager::runRound()
 
     #if 1
         cout << "flagBefore" << endl;
+        cout << getSize() << endl << endl;
     #endif
 
     //sort roundOrder

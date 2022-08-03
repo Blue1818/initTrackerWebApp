@@ -8,7 +8,7 @@ creep::creep()
     rollval = 0;
 }
 
-creep::creep(int rollval)
+creep::creep(int rollval) : entity()
 {
     actMod = 0;
     this->rollval = rollval;

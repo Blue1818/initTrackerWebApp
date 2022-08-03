@@ -13,6 +13,12 @@ class creep : public entity
     //constructors
     creep();
     creep(int rollval);
+    creep(bool val) : entity(3)
+    {
+        actMod = 0;
+        this->rollval = 1;
+        setinitMod(-100);
+    }
     creep(entity newEnt) : entity(newEnt.getname(), newEnt.getinitMod(), newEnt.getdexScore(), newEnt.getlucky())
     {
         actMod = 0;
@@ -36,6 +42,7 @@ class creep : public entity
     //crit checks
     bool isCritF();
     bool isCritS();
+    
 
 
 };
