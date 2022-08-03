@@ -1,4 +1,6 @@
-1. Fix binary search in initiative round over selection sort 
+1. Fix binary search in initiative round over selection sort XXX 
+
+2. impliment crits
 
 2. Write the turn menus
 
