@@ -256,7 +256,6 @@ vector<creep*> initmanager::getroundOrder()
     
     //prime it
     order.push_back(&tieOrder.at(0));
-
     //selection sort
     for (int i = 1; i < getSize(); i++)
     {
