@@ -22,15 +22,6 @@ void initmanager::shuffle()
 
 
 
-void initmanager::sortTieOrder()
-{
-    //merge sort into decending order.
-    mergeSort(0, (tieOrder.size() - 1));
-
-}
-
-
-
 //merge Sort function for initalization
 void initmanager::mergeSort(int start, int end)
 {
