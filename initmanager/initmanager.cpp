@@ -98,10 +98,25 @@ vector<creep*> initmanager::mergeSortptr(vector<creep*> vect, int start, int end
     {
         //     mid = (start+end)/2
         int mid = (start+end)/2;
+
+        #if 0
+            cout << "flag1" << endl;
+        #endif
+
         //     Merge-Sort(A,start,mid)
         vect = mergeSortptr(vect, start, mid);
+
+        #if 0
+            cout << "flag2" << endl;
+        #endif
+
         //     Merge-Sort(A,mid+1,end)
         vect = mergeSortptr(vect, (mid + 1), end);
+
+        #if 0
+            cout << "flag3" << endl;
+        #endif
+
         //     Merge(A,start,mid,end)
         vect = mergeptr(vect, start, mid, end);
     }
@@ -113,7 +128,7 @@ vector<creep*> initmanager::mergeptr(vector<creep*> vect, int start, int mid, in
 {
     //make a entity with -infinity dexscore
     //entity lowEnt(INT_MIN);
-    creep* lowcreep = new creep(INT_MIN);
+    creep* lowcreep = new creep(-100);
     // sizeR = mid-start+1
     //int sizeR = mid - start + 1;
     // sizeL = end-mid
@@ -139,6 +154,11 @@ vector<creep*> initmanager::mergeptr(vector<creep*> vect, int start, int mid, in
     // i = j = 0
     int i = 0;
     int j = 0;
+
+    #if 0
+        cout << L.size() << " : " << R.size() << endl;
+    #endif
+
     // FOR k from start to end
     for (int k = start; k <= end; k++)
     {
@@ -225,9 +245,13 @@ void initmanager::runRound()
     }
     //roll
     rollAll();
+
+    #if 1
+        cout << "flagBefore" << endl;
+    #endif
+
     //sort roundOrder
     roundOrder = mergeSortptr(roundOrder, 0, getSize() - 1);
-
 
     #if 1
         cout << "flagAfter" << endl;
