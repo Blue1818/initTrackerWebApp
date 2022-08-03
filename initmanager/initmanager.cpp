@@ -21,14 +21,14 @@ void initmanager::shuffle()
 }
 
 
-/*
+
 void initmanager::sortTieOrder()
 {
     //merge sort into decending order.
     mergeSort(0, (tieOrder.size() - 1));
 
 }
-*/
+
 
 
 //merge Sort function for initalization
@@ -224,7 +224,19 @@ void initmanager::printroundOrder(vector<creep*> vect)
 
 void initmanager::runRound()
 {
-    vector<creep*> roundOrder = getroundOrder();
+    //vector<creep*> roundOrder = getroundOrder(); //selection-binary-search sort
+    //merge attempt
+    vector<creep*> roundOrder;
+    //load roundOrder
+    for(int i = 0; i < getSize(); i++)
+    {
+        roundOrder.push_back(&tieOrder.at(i));
+    }
+    //roll
+    rollAll();
+    //sort roundOrder
+    roundOrder = mergeSortptr(roundOrder, 0, getSize() - 1);
+
 
     #if 1
         cout << "flagAfter" << endl;
@@ -254,6 +266,7 @@ vector<creep*> initmanager::getroundOrder()
 
     cout << "flag1 " << getSize() <<  endl;
     
+    //selection/binary search attempt
     //prime it
     order.push_back(&tieOrder.at(0));
     //selection sort
