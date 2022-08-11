@@ -326,8 +326,6 @@ void initmanager::runRound()
         //run turn
         runTurn(roundOrder.at(i));
     }
-
-
 }
 
 
