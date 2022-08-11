@@ -36,24 +36,25 @@ int main()
     manager.printTieOrder();
 
     //add roll to creep
-    manager.rollAll();
-    manager.printTieOrder();
+    //manager.rollAll();
+    //manager.printTieOrder();
 
     //order after shuffle
-    manager.shuffle();
-    manager.printTieOrder();
+    //manager.shuffle();
+    //manager.printTieOrder();
 
     //after sorting
-    manager.sortTieOrder();
-    manager.printTieOrder();
+    //manager.sortTieOrder();
+    //manager.printTieOrder();
 
     //add roll to creep
-    manager.rollAll();
-    manager.printTieOrder();
+    //manager.rollAll();
+    //manager.printTieOrder();
 
     //run round
     cout << "now lets run the round" << endl;
-    manager.runRound();
+    manager.runEncounter();
+    manager.printTieOrder();
 
     return 0;
 }
