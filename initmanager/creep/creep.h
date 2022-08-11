@@ -8,6 +8,7 @@ class creep : public entity
     private:
     int actMod;
     int rollval; // 1 - 20
+    int hp = 1;
 
     public:
     //constructors
@@ -24,6 +25,13 @@ class creep : public entity
         actMod = 0;
         rollval = 1;
     }
+    creep(entity newEnt, int hp) : entity(newEnt.getname(), newEnt.getinitMod(), newEnt.getdexScore(), newEnt.getlucky())
+    {
+        actMod = 0;
+        rollval = 1;
+        this->hp = hp;
+    }
+
 
     //setters
     void setactMod(int actMod) { this->actMod = actMod; }

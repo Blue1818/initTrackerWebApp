@@ -54,7 +54,7 @@ int main()
     //run round
     cout << "now lets run the round" << endl;
     manager.runEncounter();
-    manager.printTieOrder();
+    //manager.printTieOrder();
 
     return 0;
 }

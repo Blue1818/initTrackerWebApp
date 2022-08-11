@@ -45,7 +45,8 @@ class initmanager
     int getSize();
 
     //add entity
-    void addEntity(entity newEnt); //{ tieOrder.push_back(newEnt); }
+    void addEntity(entity newEnt);
+    void addEntity(entity newEnt, int hp);
 
     //shuffle tieOrder
     void shuffle();

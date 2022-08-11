@@ -221,12 +221,17 @@ vector<creep*> initmanager::mergeptr(vector<creep*> vect, int start, int mid, in
 } 
 
 
-
 void initmanager::addEntity(entity newEnt)
 {
     creep* creepptr = nullptr;
     creepptr = new creep(newEnt);
     tieOrder.push_back(*creepptr);
+}
+
+
+void initmanager::addEntity(entity newEnt, int hp)
+{
+    
 }
 
 
@@ -253,7 +258,7 @@ void initmanager::runEncounter(int numR)
     startEncounter();
     int roundCounter = 0;
 
-    while (numR <= 0)
+    while (numR > 0)
     {
         roundCounter++;
         cout << "Round " << roundCounter << " Start" << endl;
@@ -286,10 +291,12 @@ void initmanager::printTieOrder()
 
 void initmanager::printroundOrder(vector<creep*> vect)
 {
+    cout << "flag before" << endl;
     for (size_t i = 0; i < vect.size(); i++)
     {
         cout << vect.at(i)->getname() << " : " << vect.at(i)->result() << endl;
     }
+    cout << "flag After" << endl;
     cout << endl;
 }
 
@@ -454,6 +461,8 @@ void initmanager::runTurn(creep* character)
     do
     {
         //print menu
+        
+
         //take action
         
         //assign damage
