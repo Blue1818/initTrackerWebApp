@@ -233,7 +233,7 @@ void initmanager::addEntity(entity newEnt, int hp)
 {
     addEntity(newEnt);
     //new creep should be at the end of tieOrder
-    tieOrder.back().sethp(hp);
+    tieOrder.back().setHp(hp);
 }
 
 

@@ -36,9 +36,11 @@ class creep : public entity
     //setters
     void setactMod(int actMod) { this->actMod = actMod; }
     void setroll(int rollval) { this->rollval = rollval; }
+    void setHp(int hp) { this->hp = hp; }
     //getters
     int getactMod() { return actMod; }
     int getroll() { return rollval; }
+    int gethp() { return hp; }
 
     void roll();
 
