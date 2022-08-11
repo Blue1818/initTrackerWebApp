@@ -311,7 +311,11 @@ void initmanager::runRound()
     //load roundOrder
     for(int i = 0; i < getSize(); i++)
     {
-        roundOrder.push_back(&tieOrder.at(i));
+        //check if creep is alive.
+        if (tieOrder.at(i).isDead() == false)
+        {
+            roundOrder.push_back(&tieOrder.at(i));
+        }
     }
     //roll
     rollAll();
@@ -332,8 +336,13 @@ void initmanager::runRound()
 
     for (size_t i = 0; i < roundOrder.size(); i++)
     {
-        //run turn
-        runTurn(roundOrder.at(i));
+        //check if creep is alive.
+        if (roundOrder.at(i)->isDead() == false)
+        {
+            //run turn
+            runTurn(roundOrder.at(i));
+        }
+        
     }
 }
 
