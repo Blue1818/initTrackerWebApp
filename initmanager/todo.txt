@@ -15,3 +15,5 @@
 7. rewrite in in javascript electron or builder gnome
 
 8. add life and death roll mechanics
+
+9. add size catagory to entity class
