@@ -14,6 +14,17 @@ creep::creep(int rollval) : entity()
     this->rollval = rollval;
 }
 
+
+bool creep::isDead()
+{
+    if (hp > 0)
+    {
+        return false;
+    }
+    return true;
+}
+
+
 void creep::roll()
 {
     rollval = rand() % 20 + 1;

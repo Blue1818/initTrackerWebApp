@@ -41,6 +41,7 @@ class creep : public entity
     int getactMod() { return actMod; }
     int getroll() { return rollval; }
     int gethp() { return hp; }
+    bool isDead();
 
     void roll();
 
