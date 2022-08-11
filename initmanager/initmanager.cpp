@@ -216,21 +216,6 @@ vector<creep*> initmanager::mergeptr(vector<creep*> vect, int start, int mid, in
                 j++;
             }
         }
-        /* // IF L[i] >= R[j]
-        if (L.at(i)->result() >= R.at(j)->result())
-        {
-            // A[k] = L[i]
-            vect.at(k) = L.at(i);
-            // Increase i
-            i++;
-        } else
-        {
-            // ELSE
-            // A[k] = R[j]
-            vect.at(k) = R.at(j);
-            // Increase j
-            j++;
-        } */
     }
     return vect;
 } 
@@ -301,7 +286,7 @@ void initmanager::runRound()
     //roll
     rollAll();
 
-    #if 1
+    #if 0
         cout << "flagBefore" << endl;
         cout << getSize() << endl << endl;
     #endif
@@ -309,7 +294,7 @@ void initmanager::runRound()
     //sort roundOrder
     roundOrder = mergeSortptr(roundOrder, 0, getSize() - 1);
 
-    #if 1
+    #if 0
         cout << "flagAfter" << endl;
     #endif
 
