@@ -60,7 +60,18 @@ bool creep::isCritS()
 void creep::userAction()
 {
     //print menu for actions
-    
+    cout << "what is " << getname() <<  " going to do?" << endl;
+    cout << "1. Cast a Spell" << endl
+         << "2. Melee, Heavy Weapon" << endl
+         << "3. Melee, light or finesse weapon" << endl
+         << "4. Melee, two-handed weapon" << endl
+         << "5. Ranged, loading weapon" << endl;
+
     //modify actMod accordingly
+    // - spell level
+    // -2
+    // +2
+    // -2
+    // -5
     
 }
