@@ -472,15 +472,42 @@ void initmanager::runTurn(creep* character)
     do
     {
         //print menu
-        
-
-        //take action
-        
-        //assign damage
-
-        //make someone as dead
-
+        cout << "What would you like to do?" << endl;
+        cout << "1. Take Action" << endl;
+        cout << "2. Assign Damage" << endl;
+        cout << "3. Remove from Combat" << endl;
         //etc
+        cout << "Else End Turn" << endl;
+
+        cin >> input;
+
+        switch(input)
+        {
+            case 1: //take action
+                character->userAction();
+                break;
+            case 2: //assign damage
+                int val = 0;
+                int damage = 0;
+                printTieOrder();
+                cout << "Whos taking damage: ";
+                cin >> val;
+                cout << "How much: ";
+                cin >> damage;
+                
+
+                break;
+            case 3: //Remove From combat
+
+
+                break;
+            default:
+                #if 1
+                cout << "Moving on" << endl << endl;
+                #endif
+                break;
+        }
+
     } while (input != 0);
     
 }
