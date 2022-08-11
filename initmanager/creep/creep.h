@@ -47,6 +47,8 @@ class creep : public entity
 
     // void runTurn();
     void userAction();
+    void doDamage(int val) { hp -= val; }
+    void killIt() { hp = 0; }
     
     int result() { return (fullMod() + actMod + rollval); }
 
