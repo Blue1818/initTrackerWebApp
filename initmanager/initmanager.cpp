@@ -476,7 +476,6 @@ void initmanager::runTurn(creep* character)
         cout << "1. Take Action" << endl;
         cout << "2. Assign Damage" << endl;
         cout << "3. Remove from Combat" << endl;
-        //etc
         cout << "Else End Turn" << endl;
 
         cin >> input;
@@ -507,6 +506,7 @@ void initmanager::runTurn(creep* character)
                 #if 1
                 cout << "Moving on" << endl << endl;
                 #endif
+                input = 0;
                 break;
         }
 
