@@ -61,6 +61,10 @@ class initmanager
     //start encounter
     void startEncounter();
 
+    //main process for running encounter
+    void runEncounter() { runEncounter(1); }    //default case
+    void runEncounter(int numR);
+
     //run round
     void runRound();
     //roll and returns roundOrder in ptrs

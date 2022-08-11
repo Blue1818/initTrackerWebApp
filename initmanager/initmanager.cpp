@@ -248,6 +248,27 @@ void initmanager::startEncounter()
 }
 
 
+void initmanager::runEncounter(int numR)
+{
+    startEncounter();
+    int roundCounter = 0;
+
+    while (numR <= 0)
+    {
+        roundCounter++;
+        cout << "Round " << roundCounter << " Start" << endl;
+        runRound();
+
+        numR--;
+        if(numR == 0)
+        {
+            cout << "How many more rounds? (0 if quit)" << endl;
+            cin >> numR;
+            cout << endl;   //might delete
+        }
+    }
+}
+
 
 void initmanager::printTieOrder()
 {
