@@ -471,6 +471,8 @@ void initmanager::runTurn(creep* character)
 
     do
     {
+        int val = 0;
+        int damage = 0;
         //print menu
         cout << "What would you like to do?" << endl;
         cout << "1. Take Action" << endl;
@@ -486,8 +488,7 @@ void initmanager::runTurn(creep* character)
                 character->userAction();
                 break;
             case 2: //assign damage
-                int val = 0;
-                int damage = 0;
+                
                 printTieOrder();
                 cout << "Whos taking damage: ";
                 cin >> val;
@@ -496,7 +497,6 @@ void initmanager::runTurn(creep* character)
                 tieOrder.at(val).doDamage(damage);
                 break;
             case 3: //Remove From combat
-                int val = 0;
                 printTieOrder();
                 cout << "Who to remove: ";
                 cin >> val;
