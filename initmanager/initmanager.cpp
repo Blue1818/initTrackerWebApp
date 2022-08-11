@@ -321,7 +321,6 @@ void initmanager::runRound()
 
     printroundOrder(roundOrder);
 
-
     for (size_t i = 0; i < roundOrder.size(); i++)
     {
         //run turn
