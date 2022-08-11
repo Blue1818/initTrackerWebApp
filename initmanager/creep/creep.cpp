@@ -60,7 +60,7 @@ bool creep::isCritS()
 void creep::userAction()
 {
     //print menu for actions
-
+    
     //modify actMod accordingly
     
 }
