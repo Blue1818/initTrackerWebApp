@@ -75,7 +75,7 @@ void creep::userAction()
         case 1: // - spell level
             cout << "Spell Level = ";
             cin >> input;
-            actMod += input;
+            actMod -= input;
             break;
         case 2: // -2
             actMod += -2;
