@@ -494,12 +494,14 @@ void initmanager::runTurn(creep* character)
                 cin >> val;
                 cout << "How much: ";
                 cin >> damage;
-                
-
+                tieOrder.at(val).doDamage(damage);
                 break;
             case 3: //Remove From combat
-
-
+                int val = 0;
+                printTieOrder();
+                cout << "Who to remove: ";
+                cin >> val;
+                tieOrder.at(val).killIt();
                 break;
             default:
                 #if 1
