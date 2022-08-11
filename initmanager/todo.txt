@@ -14,4 +14,4 @@
 
 7. rewrite in in javascript electron or builder gnome
 
-8. 
+8. add life and death roll mechanics
