@@ -509,7 +509,6 @@ void initmanager::runTurn(creep* character)
                 input = 0;
                 break;
         }
-
     } while (input != 0);
     
 }
