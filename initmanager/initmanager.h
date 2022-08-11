@@ -8,9 +8,6 @@
 #include "creep/creep.h"
 
 using std::vector;
-using std::cout;
-using std::cin;
-using std::endl;
 
 class initmanager
 {

@@ -1,7 +1,12 @@
 #ifndef CREEP_H
 #define CREEP_H
 
+#include <iostream>
 #include "entity/entity.h"
+
+using std::cout;
+using std::cin;
+using std::endl;
 
 class creep : public entity
 {
